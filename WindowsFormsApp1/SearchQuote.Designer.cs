@@ -1,6 +1,6 @@
 ﻿namespace WindowsFormsApp1
 {
-    partial class Form1
+    partial class SearchQuote
     {
         /// <summary>
         /// Required designer variable.
@@ -30,13 +30,15 @@
         {
             this.SuspendLayout();
             // 
-            // Form1
+            // SearchQuote
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Name = "Form1";
-            this.Text = "Main Menu";
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
+            this.Name = "SearchQuote";
+            this.Text = "Search Quote";
             this.ResumeLayout(false);
 
         }
@@ -44,4 +46,3 @@
         #endregion
     }
 }
-

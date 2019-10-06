@@ -16,5 +16,16 @@ namespace WindowsFormsApp1
         {
             InitializeComponent();
         }
+
+        private void exitMenu_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void addQuote_Click(object sender, EventArgs e)
+        {
+            var addQuoteForm = new AddQuote();
+            addQuoteForm.Show();
+        }
     }
 }
