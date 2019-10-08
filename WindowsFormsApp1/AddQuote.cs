@@ -99,7 +99,7 @@ namespace WindowsFormsApp1
             String dqDate = dq.getDate().ToString();
             String dqWriteLine = dqQuoteNo + '|' + dqName + '|' + dqWidth + '|' + dqDepth + '|' + dqDrawers + '|' +
                                  dqMaterial + '|' + dqRush + '|' + dqTotalCost + '|' + dqDate;
-            StreamWriter deskFile = new StreamWriter("quotes.txt");
+            StreamWriter deskFile = new StreamWriter(@"quotes.txt",true);
             deskFile.WriteLine(dqWriteLine);
             deskFile.Close();
         }

@@ -52,7 +52,7 @@
             this.txtBoxListResults.Location = new System.Drawing.Point(12, 78);
             this.txtBoxListResults.Multiline = true;
             this.txtBoxListResults.Name = "txtBoxListResults";
-            this.txtBoxListResults.Size = new System.Drawing.Size(763, 20);
+            this.txtBoxListResults.Size = new System.Drawing.Size(763, 158);
             this.txtBoxListResults.TabIndex = 16;
             // 
             // lblListQuotes
@@ -67,7 +67,7 @@
             // 
             // btnListQuotes
             // 
-            this.btnListQuotes.Location = new System.Drawing.Point(377, 119);
+            this.btnListQuotes.Location = new System.Drawing.Point(377, 242);
             this.btnListQuotes.Name = "btnListQuotes";
             this.btnListQuotes.Size = new System.Drawing.Size(75, 23);
             this.btnListQuotes.TabIndex = 18;
