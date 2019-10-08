@@ -1,12 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace WindowsFormsApp1
 {
-   
+
     class DeskQuote
     {
         private int quoteNo;
@@ -27,14 +28,16 @@ namespace WindowsFormsApp1
 
         public DeskQuote()
         {
-            this.quoteNo = quoteNo++;
+            this.quoteNo = GetNextQuoteNo();
             this.basePrice = BASE_DESK;
             this.quoteDate = DateTime.Now;
         }
 
         public DeskQuote(desk desk1, String fullName, int rush)
         {
-            
+            this.quoteNo = GetNextQuoteNo();
+            this.basePrice = BASE_DESK;
+            this.quoteDate = DateTime.Now;
             this.inDesk = desk1;
             this.fullName = fullName;
             this.rush = rush;
@@ -52,7 +55,7 @@ namespace WindowsFormsApp1
         }
 
         public void setName(String fullName)
-        { 
+        {
             this.fullName = fullName;
         }
 
@@ -89,7 +92,10 @@ namespace WindowsFormsApp1
 
         private double AreaCost(double width, double depth)
         {
-            return (width * depth - 1000) * AREA_COST;
+            if ((width * depth) < 1000)
+                return 0;
+            else
+                return (width * depth - 1000) * AREA_COST;
         }
 
         private double SurfaceCost(int material)
@@ -119,17 +125,48 @@ namespace WindowsFormsApp1
 
         private double RushRate(int days, double width, double depth)
         {
-            int[,] rushRates = new int[3, 3]
+            if (days == 0)
             {
-                {60, 70, 80}, 
-                {40, 50, 60}, 
-                {30, 35, 40}
-            };
-            double addlArea = depth * width - 1000;
-            int areaBreak = (int)addlArea / 1000;
-            if (areaBreak > 2)
-                areaBreak = 2;
-            return rushRates[days,areaBreak];
+                return 0;
+            }
+            else
+            {
+                days--;
+                int[,] rushRates = new int[3, 3]
+                {
+                    {60, 70, 80},
+                    {40, 50, 60},
+                    {30, 35, 40}
+                };
+                double addlArea = depth * width - 1000;
+                if (addlArea < 0)
+                    addlArea = 0;
+                int areaBreak = (int)addlArea / 1000;
+                if (areaBreak > 2)
+                    areaBreak = 2;
+                return rushRates[days, areaBreak];
+            }
+        }
+
+        private int GetNextQuoteNo()
+        {
+            String curFile = "quotes.txt";
+            if (File.Exists(curFile))
+            {
+                StreamReader quoteFile = new StreamReader("quotes.txt");
+                int quoteNo = 0;
+                while (quoteFile.EndOfStream == false)
+                {
+                    string line = quoteFile.ReadLine();
+                    quoteNo = Int32.Parse(line.Substring(0, line.IndexOf('|')));
+                }
+
+                quoteFile.Close();
+                return ++quoteNo;
+            }
+            else
+                return 1;
         }
     }
 }
+

@@ -18,7 +18,7 @@ namespace WindowsFormsApp1
         private int numDrawers;
         private int material;
         public static int deskCtr;
-        
+
         public const double MIN_WIDTH = 24;
         public const double MAX_WIDTH = 96;
         public const double MIN_DEPTH = 12;

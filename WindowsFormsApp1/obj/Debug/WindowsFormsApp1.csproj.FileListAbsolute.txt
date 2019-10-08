@@ -10,3 +10,15 @@ C:\BYU-I\2019 Fall\CIT 365\MegaDesktop\MegaDesk-Milton\WindowsFormsApp1\obj\Debu
 C:\BYU-I\2019 Fall\CIT 365\MegaDesktop\MegaDesk-Milton\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.pdb
 C:\BYU-I\2019 Fall\CIT 365\MegaDesktop\MegaDesk-Milton\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.AddQuote.resources
 C:\BYU-I\2019 Fall\CIT 365\MegaDesktop\MegaDesk-Milton\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.SearchQuote.resources
+C:\Users\smilt\Source\Repos\MegaDesk-Milton\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe.config
+C:\Users\smilt\Source\Repos\MegaDesk-Milton\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe
+C:\Users\smilt\Source\Repos\MegaDesk-Milton\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.pdb
+C:\Users\smilt\Source\Repos\MegaDesk-Milton\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csprojAssemblyReference.cache
+C:\Users\smilt\Source\Repos\MegaDesk-Milton\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.AddQuote.resources
+C:\Users\smilt\Source\Repos\MegaDesk-Milton\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Form1.resources
+C:\Users\smilt\Source\Repos\MegaDesk-Milton\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Properties.Resources.resources
+C:\Users\smilt\Source\Repos\MegaDesk-Milton\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.SearchQuote.resources
+C:\Users\smilt\Source\Repos\MegaDesk-Milton\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.GenerateResource.cache
+C:\Users\smilt\Source\Repos\MegaDesk-Milton\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.CoreCompileInputs.cache
+C:\Users\smilt\Source\Repos\MegaDesk-Milton\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.exe
+C:\Users\smilt\Source\Repos\MegaDesk-Milton\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.pdb

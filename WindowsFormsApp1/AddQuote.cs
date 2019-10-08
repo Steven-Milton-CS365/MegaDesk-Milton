@@ -26,14 +26,10 @@ namespace WindowsFormsApp1
             newDesk.setDrawers((int)numDrawers.Value);
             newDesk.setMaterial((int)lstMaterial.SelectedIndex);
 
-            DeskQuote newQuote = new DeskQuote();
-            newQuote.setQuoteNo(getNextQuoteNo());
-            newQuote.setName(txtName.Text);
-            newQuote.setRush(lstRush.SelectedIndex);
+            DeskQuote newQuote = new DeskQuote(newDesk, txtName.Text, lstRush.SelectedIndex);
             WriteToDeskFile(newQuote);
+            MessageBox.Show("Quote " + newQuote.getQuoteNo().ToString() + " has been created!");
             this.Close();
-
-
         }
 
         private void txtWidth_Validating(object sender, CancelEventArgs e)
@@ -43,9 +39,10 @@ namespace WindowsFormsApp1
             {
                 if ((cmpWidth >= 24.0) && (cmpWidth <= 96.0))
                     e.Cancel = false;
-                else { 
+                else
+                {
                     e.Cancel = true;
-                MessageBox.Show("Enter number between 24 and 96");
+                    MessageBox.Show("Enter number between 24 and 96");
                 }
             }
             else
@@ -84,17 +81,25 @@ namespace WindowsFormsApp1
                 string line = quoteFile.ReadLine();
                 quoteNo = Int32.Parse(line.Substring(1, 10));
             }
-
+            quoteFile.Close();
             return quoteNo;
         }
 
         private void WriteToDeskFile(DeskQuote dq)
         {
+            String dqQuoteNo = dq.getQuoteNo().ToString();
+            String dqName = dq.getName();
+            String dqWidth = dq.inDesk.getWidth().ToString();
+            String dqDepth = dq.inDesk.getDepth().ToString();
+            String dqDrawers = dq.inDesk.getDrawers().ToString();
+            String dqMaterial = dq.inDesk.getMaterial().ToString();
+            String dqRush = dq.getRush().ToString();
+            String dqTotalCost = dq.TotalCost(dq.inDesk, dq.getRush()).ToString();
+            String dqDate = dq.getDate().ToString();
+            String dqWriteLine = dqQuoteNo + '|' + dqName + '|' + dqWidth + '|' + dqDepth + '|' + dqDrawers + '|' +
+                                 dqMaterial + '|' + dqRush + '|' + dqTotalCost + dqDate;
             StreamWriter deskFile = new StreamWriter("quotes.txt");
-            deskFile.WriteLine(dq.getQuoteNo().ToString() + '|'+dq.getName()+'|'+dq.inDesk.getWidth().ToString()+
-                               '|'+dq.inDesk.getDepth().ToString()+'|'+dq.inDesk.getDrawers().ToString()+'|'+
-                               dq.inDesk.getMaterial().ToString()+'|'+dq.getRush().ToString()+'|'+
-                               dq.TotalCost(dq.inDesk,dq.getRush()).ToString()+dq.getDate().ToString());
+            deskFile.WriteLine(dqWriteLine);
             deskFile.Close();
         }
     }
