@@ -101,6 +101,9 @@
     <EmbeddedResource Include="SearchQuote.resx">
       <DependentUpon>SearchQuote.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ViewQuote.resx">
+      <DependentUpon>ViewQuote.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

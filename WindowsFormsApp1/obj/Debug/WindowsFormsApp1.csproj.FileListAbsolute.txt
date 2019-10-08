@@ -23,3 +23,4 @@ C:\Users\smilt\Source\Repos\MegaDesk-Milton\WindowsFormsApp1\obj\Debug\WindowsFo
 C:\Users\smilt\Source\Repos\MegaDesk-Milton\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.exe
 C:\Users\smilt\Source\Repos\MegaDesk-Milton\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.pdb
 C:\Users\smilt\Source\Repos\MegaDesk-Milton\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.DisplayQuote.resources
+C:\Users\smilt\Source\Repos\MegaDesk-Milton\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.ViewQuote.resources

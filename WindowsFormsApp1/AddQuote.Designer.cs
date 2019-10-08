@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddQuote));
             this.lblWidth = new System.Windows.Forms.Label();
             this.txtWidth = new System.Windows.Forms.TextBox();
             this.txtDepth = new System.Windows.Forms.TextBox();
@@ -213,6 +214,7 @@
             this.Controls.Add(this.lblDepth);
             this.Controls.Add(this.txtWidth);
             this.Controls.Add(this.lblWidth);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "AddQuote";

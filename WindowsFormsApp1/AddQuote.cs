@@ -28,7 +28,6 @@ namespace WindowsFormsApp1
 
             DeskQuote newQuote = new DeskQuote(newDesk, txtName.Text, lstRush.SelectedIndex);
             WriteToDeskFile(newQuote);
-            MessageBox.Show("Quote " + newQuote.getQuoteNo().ToString() + " has been created!");
             var displayQuoteForm = new DisplayQuote();
             displayQuoteForm.Show();
             this.Close();

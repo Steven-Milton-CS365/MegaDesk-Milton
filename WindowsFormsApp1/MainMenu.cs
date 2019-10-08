@@ -27,5 +27,17 @@ namespace WindowsFormsApp1
             var addQuoteForm = new AddQuote();
             addQuoteForm.Show();
         }
+
+        private void searchQuote_Click(object sender, EventArgs e)
+        {
+            var searchQuoteForm = new SearchQuote();
+            searchQuoteForm.Show();
+        }
+
+        private void viewQuote_Click(object sender, EventArgs e)
+        {
+            var viewQuoteForm = new ViewQuote();
+            viewQuoteForm.Show();
+        }
     }
 }
