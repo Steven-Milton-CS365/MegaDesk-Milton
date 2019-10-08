@@ -29,6 +29,8 @@ namespace WindowsFormsApp1
             DeskQuote newQuote = new DeskQuote(newDesk, txtName.Text, lstRush.SelectedIndex);
             WriteToDeskFile(newQuote);
             MessageBox.Show("Quote " + newQuote.getQuoteNo().ToString() + " has been created!");
+            var displayQuoteForm = new DisplayQuote();
+            displayQuoteForm.Show();
             this.Close();
         }
 
@@ -97,7 +99,7 @@ namespace WindowsFormsApp1
             String dqTotalCost = dq.TotalCost(dq.inDesk, dq.getRush()).ToString();
             String dqDate = dq.getDate().ToString();
             String dqWriteLine = dqQuoteNo + '|' + dqName + '|' + dqWidth + '|' + dqDepth + '|' + dqDrawers + '|' +
-                                 dqMaterial + '|' + dqRush + '|' + dqTotalCost + dqDate;
+                                 dqMaterial + '|' + dqRush + '|' + dqTotalCost + '|' + dqDate;
             StreamWriter deskFile = new StreamWriter("quotes.txt");
             deskFile.WriteLine(dqWriteLine);
             deskFile.Close();
